@@ -11,7 +11,7 @@
 
 @interface ZJTaskDispatchManager()
 
-@property(nonatomic, assign)NSUInteger concurrentNumbers;
+@property(nonatomic, assign)NSInteger concurrentNumbers;
 @property(nonatomic, strong)NSMutableArray <ZJRunLoopSource *>*threadEntrys;
 @property(nonatomic, strong)ZJRunLoopSource *mainSource;
 
