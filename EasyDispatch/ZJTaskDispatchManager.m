@@ -52,7 +52,7 @@
             if (_concurrentNumbers < dstnum) {
                 NSInteger diff = dstnum - _concurrentNumbers;
                 for (NSInteger i = 0; i < diff; i++) {
-                    NSString *name = [NSString stringWithFormat:@"ZJRunLoopSource_%ld",long(_concurrentNumbers+i+i)];
+                    NSString *name = [NSString stringWithFormat:@"ZJRunLoopSource_%ld",(_concurrentNumbers+i+i)];
                     ZJRunLoopSource *src = [[ZJRunLoopSource alloc] initWithThread:name];
                     src.sourceProvider = self;
                     [_threadEntrys addObject:src];
