@@ -34,7 +34,7 @@
         _concurrentNumbers = num > 4 ? 4 : num;
         _threadEntrys = [[NSMutableArray alloc] init];
         for (NSInteger i = 0; i < _concurrentNumbers; i++) {
-            NSString *name = [NSString stringWithFormat:@"ZJRunLoopSource_%ld",i+1];
+            NSString *name = [NSString stringWithFormat:@"ZJRunLoopSource_%zd",i+1];
             ZJRunLoopSource *src = [[ZJRunLoopSource alloc] initWithThread:name];
             src.sourceProvider = self;
             [_threadEntrys addObject:src];
@@ -52,7 +52,7 @@
             if (_concurrentNumbers < dstnum) {
                 NSInteger diff = dstnum - _concurrentNumbers;
                 for (NSInteger i = 0; i < diff; i++) {
-                    NSString *name = [NSString stringWithFormat:@"ZJRunLoopSource_%ld",_concurrentNumbers+i+i];
+                    NSString *name = [NSString stringWithFormat:@"ZJRunLoopSource_%zd",_concurrentNumbers+i+i];
                     ZJRunLoopSource *src = [[ZJRunLoopSource alloc] initWithThread:name];
                     src.sourceProvider = self;
                     [_threadEntrys addObject:src];

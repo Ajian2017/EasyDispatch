@@ -208,4 +208,9 @@ void sourceRunLoopObserver(CFRunLoopObserverRef observer, CFRunLoopActivity acti
     [assosiateThread cancel];
 }
 
+- (id<RunableTask>)takeNextTask
+{
+    return nil;
+}
+
 @end
