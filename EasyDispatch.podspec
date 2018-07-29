@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "EasyDispatch"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "the target of this project is to make operatoring threads super easy"
 
   s.description  = "the target of this project is to make  operatoring threads more safe and easy,also efficiently"
